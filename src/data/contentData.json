@@ -1,0 +1,274 @@
+{
+  "logo": "HT.DEV",
+  "navigation": [
+    {
+      "label": "Home",
+      "target": "#home"
+    },
+    {
+      "label": "About",
+      "target": "#about"
+    },
+    {
+      "label": "Skills",
+      "target": "#skills"
+    },
+    {
+      "label": "Projects",
+      "target": "#projects"
+    },
+    {
+      "label": "Experiences",
+      "target": "#experiences"
+    },
+    {
+      "label": "Contact",
+      "target": "#contact"
+    }
+  ],
+  "resumeLabel": "Resume",
+  "hero": {
+    "name": "Chềnh Hưng Thọ",
+    "roles": "BACKEND DEVELOPER",
+    "description": "I build apps with AI, then wonder how they work.",
+    "primaryBtnText": "Xem dự án",
+    "secondaryBtnText": "Liên hệ",
+    "profileImage": "./assets/profile_robot.png"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "Tôi là sinh viên/cử nhân CNTT tại UTH, định hướng trở thành Backend Developer chuyên sâu về hệ sinh thái Java / Spring Boot. Tôi có đam mê sâu sắc với việc xây dựng các hệ thống web hiện đại, có khả năng mở rộng, hiệu năng cao và bảo mật tốt.",
+      "Tôi nỗ lực kết hợp kiến thức nền tảng CNTT vững chắc với các kỹ năng thực tế như phát triển RESTful API và thiết kế UI/UX để tạo ra các giải pháp phần mềm toàn diện."
+    ],
+    "strengths": [
+      {
+        "id": "logic",
+        "tag": "01",
+        "title": "Logic & Data",
+        "description": "Tư duy logic mạch lạc, nắm vững kiến thức lập trình hướng đối tượng (OOP). Có kinh nghiệm thiết kế bảng, quan hệ dữ liệu và viết truy vấn với PostgreSQL/MySQL.",
+        "icon": "Database"
+      },
+      {
+        "id": "fast-learner",
+        "tag": "02",
+        "title": "Fast Learner",
+        "description": "Thích nghi nhanh. Chủ động làm chủ và triển khai các công nghệ mới: Spring Boot, React, Docker.",
+        "icon": "Zap"
+      },
+      {
+        "id": "team-player",
+        "tag": "03",
+        "title": "Team Player",
+        "description": "Có kinh nghiệm làm việc nhóm qua các đồ án tại UTH. Thành thạo quy trình Git cơ bản (branching, pull request, merge) và có tinh thần trách nhiệm, chủ động giao tiếp.",
+        "icon": "Users"
+      },
+      {
+        "id": "clean-code",
+        "tag": "04",
+        "title": "Clean Code & Standards",
+        "description": "Viết code sạch theo chuẩn SOLID, tư duy cấu trúc rõ ràng, tối ưu hiệu năng và dễ dàng mở rộng hệ thống.",
+        "icon": "FileCode"
+      }
+    ]
+  },
+  "technicalArsenal": {
+    "title": "Technical Arsenal",
+    "subtitle": "Tools and technologies I use to bring ideas to life.",
+    "groups": [
+      {
+        "id": "languages",
+        "title": "Languages",
+        "icon": "Code2",
+        "items": [
+          "Java",
+          "JavaScript",
+          "HTML5/CSS3",
+          "C++",
+          "Python"
+        ]
+      },
+      {
+        "id": "frameworks",
+        "title": "Frameworks",
+        "icon": "Layers",
+        "items": [
+          "Spring Boot",
+          "Spring Framework (JPA, Security)",
+          "React (Vite)",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "id": "tools",
+        "title": "Tools & DevOps",
+        "icon": "Wrench",
+        "items": [
+          "Git / Github",
+          "Docker",
+          "Google Cloud Platform (GCP)",
+          "Postman / Bruno",
+          "VS Code"
+        ]
+      },
+      {
+        "id": "databases",
+        "title": "Databases",
+        "icon": "Database",
+        "items": [
+          "MySQL",
+          "PostgreSql",
+          "MongoDB"
+        ]
+      }
+    ]
+  },
+  "featuredProjects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of my recent works and research.",
+    "projects": [
+      {
+      "id": "truyen-cloud",
+      "title": "Truyen-Cloud - Nền Tảng Đọc Truyện & Cào Dữ Liệu Tự Động",
+      "description": "Hệ thống đọc truyện trực tuyến xây dựng trên MongoDB, tích hợp Spring Scheduler cào truyện tự động từ MangaDex API, Rate Limiter chống spam và quản lý thu hồi JWT qua Redis.",
+      "tags": [
+        "Spring Boot",
+        "MongoDB",
+        "Redis",
+        "Docker",
+        "React"
+      ],
+      "image": "/portfolio/public/assets/Project_Manga.png",
+      "hasCaseStudy": true,
+      "features": [
+        {
+          "title": "Quản lý Truyện & Độc giả",
+          "desc": "Lưu trữ dữ liệu truyện, chương, lịch sử xem và đánh dấu yêu thích linh hoạt với mô hình Document của MongoDB."
+        },
+        {
+          "title": "Cào & Đồng bộ tự động",
+          "desc": "Tích hợp MangadexImportService kết hợp Spring Scheduler định kỳ cào và cập nhật chương truyện mới ngầm tự động."
+        },
+        {
+          "title": "Bảo mật & Quản lý Token",
+          "desc": "Xác thực người dùng qua JWT (JwtAuthFilter), tích hợp RedisTokenService quản lý phiên và cơ chế blacklist thu hồi token an toàn."
+        },
+        {
+          "title": "Chống Spam & Đóng gói Docker",
+          "desc": "Triển khai RateLimiterFilter hạn chế tần suất gọi API và đóng gói toàn bộ hệ sinh thái (Backend, Frontend, MongoDB, Redis) qua Docker Compose."
+        }
+      ],
+      "demoUrl": "",
+      "demoButtonText": "XEM TÀI LIỆU API // POSTMAN DOCS",
+      "githubUrl": "https://github.com/dduy26/truyen-cloud.git",
+      "accounts": [],
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "MongoDB",
+        "Redis",
+        "Docker",
+        "Nginx",
+        "React (Vite)"
+      ]
+    },
+      {
+        "id": "hotel-tracker",
+        "title": "Hotel Tracker - Hệ Thống Quản Lý & Đặt Phòng Khách Sạn Đa Chi Nhánh",
+        "description": "Nền tảng quản lý khách sạn (PMS) và đặt phòng trực tuyến, tích hợp khóa phân tán Redis chống trùng lịch đặt (Double-booking), phân quyền 4 vai trò và cập nhật trạng thái thời gian thực qua WebSocket.",
+        "tags": [
+          "Spring Boot",
+          "PostgreSQL",
+          "Redis",
+          "WebSocket",
+          "Next.js"
+        ],
+        "image": "/portfolio/public/assets/Project_Hotel.png",
+        "hasCaseStudy": true,
+        "caseStudyText": "VIEW CASE STUDY // DETAIL",
+        "githubUrl": "https://github.com/thocuteee/hotel_tracker.git",
+        "techStack": [
+          "Java",
+          "Spring Boot",
+          "Spring Security",
+          "PostgreSQL",
+          "Redis",
+          "Spring WebSocket",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS",
+          "Docker"
+        ],
+        "features": [
+          {
+            "title": "Khóa phân tán chống Double-booking (Redis Lock)",
+            "description": "Triển khai RedisLockService để thực hiện cơ chế soft-lock phòng tạm thời trong lúc khách hàng thanh toán, triệt tiêu hoàn toàn rủi ro trùng lịch đặt khi có nhiều truy cập đồng thời."
+          },
+          {
+            "title": "Phân quyền nghiệp vụ đa tầng (RBAC)",
+            "description": "Thiết kế kiến trúc phân quyền chặt chẽ cho 4 nhóm đối tượng: Khách hàng (đặt phòng/thanh toán), Lễ tân (check-in/check-out), Buồng phòng (cập nhật vệ sinh) và Quản trị viên (quản lý chi nhánh, phòng, doanh thu)."
+          },
+          {
+            "title": "Đồng bộ trạng thái thời gian thực (WebSocket)",
+            "description": "Tích hợp Spring WebSocket (STOMP) để cập nhật tức thì sơ đồ phòng và trạng thái đơn đặt đến màn hình Lễ tân và Buồng phòng mà không cần tải lại trang."
+          },
+          {
+            "title": "Thiết kế cơ sở dữ liệu quan hệ chuẩn hóa & Docker",
+            "description": "Mô hình hóa dữ liệu quan hệ chặt chẽ với PostgreSQL (Branch, RoomType, Booking, PriceLog, MaintenanceLog) và đóng gói trọn bộ môi trường khởi chạy bằng Docker Compose."
+          }
+        ]
+      }
+    ]
+  },
+  "experiences": {
+    "title": "Experiences & Education",
+    "steps": [
+      {
+        "id": "student",
+        "period": "2023 — PRESENT",
+        "title": "Sinh viên CNTT – Đại học Giao thông vận tải TP.HCM (UTH)",
+        "description": "Theo học chuyên ngành Công nghệ Thông tin tại UTH với định hướng chuyên sâu về Backend Developer. Tích lũy nền tảng vững chắc về Lập trình hướng đối tượng (OOP), Cấu trúc dữ liệu & Giải thuật và Thiết kế Cơ sở dữ liệu quan hệ."
+      },
+      {
+        "id": "backend-projects",
+        "period": "2025 — 2026",
+        "title": "Phát triển Dự án Backend – Java Spring Boot",
+        "description": "Nghiên cứu và phát triển các hệ thống RESTful API thực tế. Thiết kế kiến trúc phân tầng, phân quyền xác thực với Spring Security/JWT, quản lý dữ liệu với PostgreSQL và triển khai container hóa ứng dụng với Docker lên nền tảng Google Cloud (GCP).",
+        "tags": [
+          "JAVA",
+          "SPRING BOOT",
+          "POSTGRESQL",
+          "DOCKER",
+          "GCP"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind or just want to chat about tech? I'm always open to new opportunities and collaborations.",
+    "email": "hungtho2501@gmail.com",
+    "github": "github.com/Thocuteee",
+    "githubUrl": "https://github.com/Thocuteee",
+    "placeholderName": "John Doe",
+    "placeholderEmail": "john@example.com",
+    "placeholderMessage": "How can I help you?",
+    "buttonText": "Send Message",
+    "successMessage": "Thank you! Your message has been sent successfully."
+  },
+  "footer": {
+    "brand": "HungTho.Dev",
+    "tagline": "Constellation-grade performance.",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Thocuteee"
+      },
+      {
+        "label": "Email",
+        "url": "mailto:hungtho2501@gmail.com"
+      }
+    ]
+  }
+}
