@@ -138,7 +138,7 @@
         "Docker",
         "React"
       ],
-      "image": "/public/assets/Project_Manga.png",
+      "image": "assets/Project_Manga.png",
       "hasCaseStudy": true,
       "features": [
         {
@@ -184,7 +184,7 @@
           "WebSocket",
           "Next.js"
         ],
-        "image": "/public/assets/Project_Hotel.png",
+        "image": "assets/Project_Hotel.png",
         "hasCaseStudy": true,
         "caseStudyText": "VIEW CASE STUDY // DETAIL",
         "githubUrl": "https://github.com/thocuteee/hotel_tracker.git",
