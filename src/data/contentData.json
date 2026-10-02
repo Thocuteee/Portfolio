@@ -38,7 +38,7 @@
   "about": {
     "title": "About Me",
     "paragraphs": [
-      "Tôi là sinh viên/cử nhân CNTT tại UTH, định hướng trở thành Backend Developer chuyên sâu về hệ sinh thái Java / Spring Boot. Tôi có đam mê sâu sắc với việc xây dựng các hệ thống web hiện đại, có khả năng mở rộng, hiệu năng cao và bảo mật tốt.",
+      "Tôi là sinh viên năm cuối CNTT tại Trường Đại học Giao thông Vận tải (UTH), định hướng trở thành Backend Developer chuyên sâu về hệ sinh thái Java / Spring Boot. Tôi có đam mê sâu sắc với việc xây dựng các hệ thống web hiện đại, có khả năng mở rộng, hiệu năng cao và bảo mật tốt.",
       "Tôi nỗ lực kết hợp kiến thức nền tảng CNTT vững chắc với các kỹ năng thực tế như phát triển RESTful API và thiết kế UI/UX để tạo ra các giải pháp phần mềm toàn diện."
     ],
     "strengths": [
@@ -128,8 +128,8 @@
     "subtitle": "A selection of my recent works and research.",
     "projects": [
       {
-      "id": "truyen-cloud",
-      "title": "Truyen-Cloud - Nền Tảng Đọc Truyện & Cào Dữ Liệu Tự Động",
+      "id": "Manga_Sync",
+      "title": "Manga_Sync - Nền Tảng Đọc Truyện & Cào Dữ Liệu Tự Động",
       "description": "Hệ thống đọc truyện trực tuyến xây dựng trên MongoDB, tích hợp Spring Scheduler cào truyện tự động từ MangaDex API, Rate Limiter chống spam và quản lý thu hồi JWT qua Redis.",
       "tags": [
         "Spring Boot",
@@ -216,6 +216,113 @@
           {
             "title": "Thiết kế cơ sở dữ liệu quan hệ chuẩn hóa & Docker",
             "description": "Mô hình hóa dữ liệu quan hệ chặt chẽ với PostgreSQL (Branch, RoomType, Booking, PriceLog, MaintenanceLog) và đóng gói trọn bộ môi trường khởi chạy bằng Docker Compose."
+          }
+        ]
+      },
+      {
+        "id": "jira-github-tracker",
+        "title": "Jira-GitHub Tracker – Nền Tảng Đồng Bộ Nhiệm Vụ & Commit Phân Tán",
+        "description": "Hệ thống quản lý và đồng bộ tiến độ phần mềm kiến trúc Microservices, tự động liên kết GitHub Commits với Jira Issues, điều phối sự kiện qua RabbitMQ và lưu trữ Object Storage.",
+        "tags": [
+          "Spring Boot",
+          "Microservices",
+          "RabbitMQ",
+          "Jira & GitHub API",
+          "Cloudflare R2 / S3",
+          "Docker"
+        ],
+        "image": "assets/Project_Jira_Tracker.png",
+        "hasCaseStudy": true,
+        "caseStudyText": "VIEW CASE STUDY // DETAIL",
+        "demoUrl": "",
+        "demoButtonText": "XEM TÀI LIỆU HỆ THỐNG",
+        "githubUrl": "https://github.com/Thocuteee/Jira_Github_Project_Tracker.git",
+        "techStack": [
+          "Java 21",
+          "Spring Boot 3",
+          "Spring Cloud Gateway",
+          "RabbitMQ",
+          "PostgreSQL",
+          "Jira REST API",
+          "GitHub API",
+          "Cloudflare R2 / S3",
+          "Firebase FCM",
+          "Docker Compose",
+          "React (Vite)"
+        ],
+        "features": [
+          {
+            "title": "Đồng bộ hai chiều Jira Issue & GitHub Commit",
+            "description": "Xây dựng service chuyên trách kết nối Jira Cloud REST API và GitHub API, tự động bóc tách commit hash để mapping trực tiếp với mã Task/Issue tương ứng trong hệ thống."
+          },
+          {
+            "title": "Kiến trúc Microservices & API Gateway",
+            "description": "Tách biệt 9 dịch vụ chuyên biệt (Auth, Gateway, Task, Requirement, Jira, GitHub, Group, File, Notification). Gateway đảm nhận vai trò Reverse Proxy tập trung, xác thực JWT và kiểm soát Rate Limit."
+          },
+          {
+            "title": "Giao tiếp Event-Driven qua RabbitMQ",
+            "description": "Sử dụng RabbitMQ làm Message Broker trung gian để truyền tin bất đồng bộ (TaskEvent, CommitSyncEvent, MemberEvent), đảm bảo tính toàn vẹn và không làm nghẽn luồng xử lý chính."
+          },
+          {
+            "title": "Lưu trữ Object Storage (R2/S3) & Xuất tài liệu SRS",
+            "description": "Tích hợp AWS S3 SDK / Cloudflare R2 để tải và cấp quyền tải tài liệu qua cơ chế Presigned URL an toàn; tự động tổng hợp dữ liệu đồ án để xuất tài liệu đặc tả SRS định dạng PDF/DOCX."
+          },
+          {
+            "title": "Thông báo đa kênh theo thời gian thực",
+            "description": "Tích hợp Firebase Cloud Messaging (FCM) đẩy thông báo trực tiếp đến trình duyệt ngay khi có cập nhật task, kết hợp gửi email thông báo tự động qua Resend API."
+          }
+        ]
+      },
+      {
+        "id": "chat-message-realtime",
+        "title": "ChatPulse – Real-Time Messaging & Collaboration Platform",
+        "description": "Nền tảng nhắn tin thời gian thực với Socket.IO và Prisma ORM, hỗ trợ chat 1-1/nhóm, chia sẻ file qua Cloudinary, thả reaction, thu hồi tin nhắn và quản lý phiên đa thiết bị.",
+        "tags": [
+          "Node.js",
+          "Express",
+          "Socket.IO",
+          "Prisma ORM",
+          "PostgreSQL",
+          "Cloudinary",
+          "Docker"
+        ],
+        "image": "assets/Project_ChatPulse.png",
+        "hasCaseStudy": true,
+        "caseStudyText": "VIEW CASE STUDY // DETAIL",
+        "demoUrl": "",
+        "demoButtonText": "XEM TÀI LIỆU API",
+        "githubUrl": "https://github.com/Thocuteee/ChatMessage.git",
+        "techStack": [
+          "Node.js",
+          "Express.js",
+          "Socket.IO",
+          "Prisma ORM",
+          "PostgreSQL / MySQL",
+          "Cloudinary API",
+          "Docker Compose",
+          "React (Vite)",
+          "Tailwind CSS"
+        ],
+        "features": [
+          {
+            "title": "Giao tiếp thời gian thực độ trễ thấp (Socket.IO)",
+            "description": "Điều phối sự kiện truyền nhận tin nhắn hai chiều, phát sóng trạng thái online/offline, typing indicator và cập nhật tức thì danh sách tin nhắn giữa các phòng chat (rooms) mà không cần tải lại trang."
+          },
+          {
+            "title": "Mô hình hóa dữ liệu quan hệ với Prisma ORM",
+            "description": "Thiết kế hệ thống bảng dữ liệu chặt chẽ qua Prisma schema (Users, Conversations, Participants, Messages, Reactions, Attachments, Blocklist), tối ưu hóa quan hệ n-n và khóa ngoại đảm bảo toàn vẹn dữ liệu."
+          },
+          {
+            "title": "Tối ưu hóa lưu trữ đa phương tiện (Cloudinary)",
+            "description": "Xử lý upload và stream hình ảnh, tài liệu đính kèm trực tiếp thông qua Cloudinary SDK, tự động nén kích thước tệp giúp tiết kiệm băng thông máy chủ."
+          },
+          {
+            "title": "Nghiệp vụ tin nhắn nâng cao & Bảo mật",
+            "description": "Triển khai đầy đủ tính năng thu hồi tin nhắn (soft delete), ghim tin nhắn quan trọng, thả biểu cảm cảm xúc (reactions) và hệ thống danh sách chặn (Blocklist) an toàn."
+          },
+          {
+            "title": "Quản trị phiên đa thiết bị & Đóng gói Docker",
+            "description": "Xác thực người dùng qua JWT kết hợp theo dõi danh sách thiết bị đăng nhập (Device Management), đóng gói độc lập Frontend và Backend sẵn sàng khởi chạy qua Docker Compose."
           }
         ]
       }

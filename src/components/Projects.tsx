@@ -10,7 +10,7 @@ const data = (contentData as any).featuredProjects as FeaturedProjectsSection;
 
 // Highly professional, detailed project case studies in Vietnamese
 const projectDetails: Record<string, { challenge: string; solution: string; outcome: string; duration: string; role: string }> = {
-    "truyen-cloud": {
+    "Manga_Sync": {
     challenge: "Xây dựng hệ thống đọc truyện trực tuyến có khả năng tự động cào và đồng bộ dữ liệu chương mới từ MangaDex, kiểm soát tải truy cập chống spam API và quản lý phiên người dùng linh hoạt với cơ sở dữ liệu Document.",
     solution: "Sử dụng Spring Boot kết hợp Spring Data MongoDB để tối ưu hóa lưu trữ dữ liệu truyện, chương và lịch sử hoạt động[cite: 8]. Xây dựng MangadexImportService cùng StoryScheduler để tự động cào dữ liệu định kỳ[cite: 8]. Triển khai RateLimiterFilter và RedisTokenService trên Redis để giới hạn tần suất request và quản lý blacklist token[cite: 8]. Đóng gói toàn bộ hệ thống bằng Docker Compose[cite: 8].",
     outcome: "Hệ thống vận hành trơn tru với mô hình NoSQL linh hoạt, cào và đồng bộ dữ liệu truyện tự động định kỳ, bảo vệ an toàn các endpoint API và dễ dàng triển khai với một lệnh docker-compose duy nhất[cite: 8].",
@@ -23,7 +23,23 @@ const projectDetails: Record<string, { challenge: string; solution: string; outc
     outcome: "Đơn hàng và giỏ hàng xử lý mượt mà, đồng hành cùng dashboard quản trị trực quan. Triển khai phân phối tự động chỉ trong vài phút, tối ưu hóa tối đa chi phí vận hành hạ tầng.",
     duration: "4 Tháng",
     role: "Full-stack Developer & DevOps Engineer"
+  },
+  "GitJira_Sync": {
+    challenge: "Xây dựng hệ thống đồng bộ tiến độ đồ án và dự án phần mềm theo kiến trúc Microservices, tự động map commit từ GitHub với các issue trên Jira, xử lý truyền thông tin cậy giữa các dịch vụ phân tán và lưu trữ tài liệu SRS tập trung.",
+    solution: "Thiết kế hệ sinh thái Microservices trên nền Spring Boot gồm 9 services độc lập (Gateway, Auth, Task, Requirement, Jira, GitHub, Group, File, Notification)[cite: 3]. Tích hợp RabbitMQ để điều phối sự kiện bất đồng bộ khi có commit hoặc cập nhật task mới[cite: 3]. Kết nối Jira REST API và GitHub API để đồng bộ trạng thái hai chiều[cite: 3]. Sử dụng Cloudflare R2 / AWS S3 xử lý lưu trữ tệp qua Presigned URL và Firebase FCM gửi thông báo đẩy[cite: 3].",
+    outcome: "Tự động hóa hoàn toàn quy trình theo dõi dự án: commit code tự động liên kết với Jira issue, hệ thống hoạt động ổn định với cơ chế Event-driven qua RabbitMQ, tự động xuất tài liệu SRS chuẩn và triển khai trọn bộ bằng Docker Compose[cite: 3].",
+    duration: "4 Tháng",
+    role: "Backend Architect & Microservices Developer"
+  },
+    "ChatPulse_Realtime": {
+    challenge: "Xây dựng hệ sinh thái nhắn tin thời gian thực có độ trễ thấp, đảm bảo tính toàn vẹn và đồng bộ dữ liệu song song giữa luồng kết nối WebSocket và cơ sở dữ liệu quan hệ, hỗ trợ đầy đủ các tính năng xã hội phức tạp như quản lý quan hệ bạn bè, chặn đối tượng, tải tệp đa phương tiện và thông báo đẩy.",
+    solution: "Thiết kế kiến trúc Backend hướng sự kiện trên nền Node.js/Express kết hợp Socket.IO điều phối trạng thái online/offline và tin nhắn tức thì[cite: 4]. Quản lý mô hình dữ liệu quan hệ chặt chẽ bằng Prisma ORM với 20+ bảng nghiệp vụ (Conversation, Message, Participant, Reaction, Attachment, Blocklist, Device)[cite: 4]. Tích hợp Cloudinary lưu trữ và tối ưu hóa tệp đính kèm[cite: 4], áp dụng JWT xác thực đa phiên thiết bị và đóng gói toàn bộ hệ sinh thái bằng Docker Compose[cite: 4].",
+    outcome: "Hệ thống chat hoạt động ổn định với thời gian phản hồi tin nhắn dưới 50ms qua Socket.IO, xử lý phân quyền thành viên và thu hồi tin nhắn an toàn, hỗ trợ quản lý trạng thái đọc/chưa đọc và dễ dàng triển khai đa nền tảng với Docker[cite: 4].",
+    duration: "2 Tháng",
+    role: "Fullstack / Backend-focused Developer"
   }
+
+
 };
 
 export default function Projects() {
